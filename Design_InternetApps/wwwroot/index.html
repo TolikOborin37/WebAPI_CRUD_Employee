@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Employee CRUD</title>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <h1>Employee CRUD</h1>
+    <!--Форма для добавления нового сотрудника-->
+    <form onsubmit="Add_and_Update_Employee()">
+        <input type="hidden" id="employee-id"/>
+        <input type="text" placeholder="FirstName" id="add-firstName"/>
+        <input type="text" placeholder="LastName" id="add-LastName"/>
+        <input type="text" placeholder="PhoneNumber" id="add-PhoneNumber"/>
+        <input type="submit" value="добавить" id="formAddUpdate"/>
+    </form>
+    <br />
+    <!--Таблица вывода всех сотрдников-->
+    <table>
+        <thead>
+            <tr>
+                <th>FirsName</th>
+                <th>LastName</th>
+                <th>PhoneNumber</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="employees">
+        </tbody>
+    </table>
+
+    <script src="js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        getItemsTableEmployees();
+    </script>
+</body>
+</html>
